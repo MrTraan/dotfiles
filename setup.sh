@@ -15,3 +15,4 @@ if [ -f "$HOME/.vimrc" ]; then
 fi
 
 cp ./vimrc ~/.vimrc
+echo "Now run ':PluginInstall' from vim"
