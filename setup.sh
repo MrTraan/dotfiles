@@ -1,7 +1,8 @@
 #!/bin/bash
 
-mkdir -p ~/.vim/colors
+mkdir -p ~/.vim/colors ~/.vim/bundle
 cp -R ./vim/colors/* ~/.vim/colors/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 if [ -f "$HOME/.vimrc" ]; then
     printf ".vimrc file already exists, override ? [y/n] "
@@ -14,5 +15,5 @@ if [ -f "$HOME/.vimrc" ]; then
     mv ~/.vimrc ~/vimrc_backup
 fi
 
-cp ./vimrc ~/.vimrc
+ln -s `pwd`/vimrc ~/.vimrc
 echo "Now run ':PluginInstall' from vim"

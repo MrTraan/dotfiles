@@ -2,6 +2,14 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set mouse=a
 
+" remap
+inoremap jk <Esc>
+nnoremap ; :
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 set textwidth=0
 set wrapmargin=0  "Disable line wrap
 set ruler   "Show row and column ruler information
@@ -21,10 +29,9 @@ set ignorecase  "Always case-insensitive
 set incsearch   "Searches for strings incrementally
 
 syntax on
+set nu
 set tabstop=4
-set softtabstop=0 noexpandtab
 set autoindent   " Auto-indent new lines
-set expandtab    " Use spaces instead of tabs
 set shiftwidth=4 " Number of auto-indent spaces
 set smartindent  " Enable smart-indent
 set smarttab     " Enable smart-tabs
