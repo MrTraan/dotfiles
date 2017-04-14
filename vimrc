@@ -5,10 +5,14 @@ set mouse=a
 " remap
 inoremap jk <Esc>
 nnoremap ; :
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+noremap <Up>				<NOP>
+noremap <Down>				<NOP>
+noremap <Left>				<NOP>
+noremap <Right>				<NOP>
+noremap <S-Right>			<C-w><Right>
+noremap <S-Left>			<C-w><Left>
+noremap <S-Up>				<C-w><Up>
+noremap <S-Down>			<C-w><Down>
 
 set textwidth=0
 set wrapmargin=0  "Disable line wrap
@@ -121,13 +125,13 @@ nnoremap <leader>yR :YcmRestartServer<CR>
 
 
 let g:clang_format#style_options = {
-      \ "AllowShortFunctionsOnASingleLine": "Empty",
-      \ "AlwaysBreakTemplateDeclarations": "true",
-      \ "IndentCaseLabels": "true",
-      \ "IndentWidth":     4,
-      \ "MaxEmptyLinesToKeep": 2,
-      \ "TabWidth": 4,
-      \ "UseTab": "ForIndentation"}
+			\ "AllowShortFunctionsOnASingleLine": "Empty",
+			\ "AlwaysBreakTemplateDeclarations": "true",
+			\ "IndentCaseLabels": "true",
+			\ "IndentWidth":     4,
+			\ "MaxEmptyLinesToKeep": 2,
+			\ "TabWidth": 4,
+			\ "UseTab": "ForIndentation"}
 
 " Default multi cursors mapping
 let g:multi_cursor_next_key='<C-n>'
