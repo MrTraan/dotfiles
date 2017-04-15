@@ -5,10 +5,10 @@ set mouse=a
 " remap
 inoremap jk <Esc>
 nnoremap ; :
-noremap <Up>				<NOP>
-noremap <Down>				<NOP>
-noremap <Left>				<NOP>
-noremap <Right>				<NOP>
+""noremap <Up>				<NOP>
+""noremap <Down>				<NOP>
+""noremap <Left>				<NOP>
+"'noremap <Right>				<NOP>
 noremap <S-Right>			<C-w><Right>
 noremap <S-Left>			<C-w><Left>
 noremap <S-Up>				<C-w><Up>
