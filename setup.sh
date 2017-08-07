@@ -16,4 +16,4 @@ if [ -f "$HOME/.vimrc" ]; then
 fi
 
 ln -s `pwd`/vimrc ~/.vimrc
-echo "Now run ':PluginInstall' from vim"
+vim +PlugInstall
