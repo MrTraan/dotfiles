@@ -74,6 +74,8 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 "color scheme
 set background=dark
 colorscheme solarized
+" colorscheme molokai
+let g:molokai_original = 1
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -109,6 +111,12 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+Plugin 'prettier/vim-prettier'
+
+Plugin 'OrangeT/vim-csharp'
+
+Plugin 'leafgarland/typescript-vim'
 
 """ Completion
 if !has('nvim')
@@ -163,7 +171,7 @@ endif
 " CLANG FORMAT
 " default settings
 let g:clang_format#code_style = "chromium"
-let g:clang_format#auto_format = 1
+let g:clang_format#auto_format = 0
 
 autocmd FileType cpp ClangFormatAutoEnable
 
@@ -186,3 +194,37 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
 
 autocmd VimResized * wincmd =
+
+" max line lengh that prettier will wrap on
+let g:prettier#config#print_width = 90
+
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'true'
+
+" none|es5|all
+let g:prettier#config#trailing_comma = 'es5'
+
+" flow|babylon|typescript|postcss|json|graphql
+let g:prettier#config#parser = 'flow'
+
+let g:prettier#autoformat = 0
+
+set laststatus=2
+set noshowmode
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
