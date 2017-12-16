@@ -16,4 +16,4 @@ if [ -f "$HOME/.vimrc" ]; then
 fi
 
 ln -s `pwd`/vimrc ~/.vimrc
-vim +PlugInstall
+vim +PluginInstall
