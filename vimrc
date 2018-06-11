@@ -73,7 +73,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 
 "color scheme
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 " colorscheme molokai
 let g:molokai_original = 1
 
@@ -176,6 +176,7 @@ let g:clang_format#auto_format = 0
 autocmd FileType cpp ClangFormatAutoEnable
 
 let g:clang_format#style_options = {
+			\ "SortIncludes": "false",
 			\ "AllowShortFunctionsOnASingleLine": "Empty",
 			\ "AlwaysBreakTemplateDeclarations": "true",
 			\ "IndentCaseLabels": "true",
