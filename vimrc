@@ -108,8 +108,6 @@ Plugin 'isRuslan/vim-es6'
 
 Plugin 'itchyny/lightline.vim'
 
-Plugin 'ryanoasis/vim-devicons'
-
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plugin 'prettier/vim-prettier'
@@ -127,6 +125,8 @@ if has('nvim')
 	Plugin 'Shougo/deoplete.nvim'
 	Plugin 'carlitux/deoplete-ternjs'
 endif
+
+runtime ftplugin/man.vim
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
