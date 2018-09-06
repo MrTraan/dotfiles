@@ -72,10 +72,15 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 
 "color scheme
+let g:solarized_termcolors=256
+set t_Co=256
 set background=dark
-" colorscheme solarized
+colorscheme solarized
+let g:solarized_termtrans = 1
+let g:airline_solarized_bg='dark'
+let g:airline_theme='solarized'
 " colorscheme molokai
-let g:molokai_original = 1
+" let g:molokai_original = 1
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -115,6 +120,10 @@ Plugin 'prettier/vim-prettier'
 Plugin 'OrangeT/vim-csharp'
 
 Plugin 'leafgarland/typescript-vim'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
 
 """ Completion
 if !has('nvim')
@@ -229,3 +238,4 @@ set laststatus=2
 set noshowmode
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+autocmd BufRead,BufNewFile *.as set filetype=as3
